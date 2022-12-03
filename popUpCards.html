@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pop Up Cards</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://kit.fontawesome.com/2c3103d0c4.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #13151f;
+        }
+		.container{
+            
+            position: relative;
+            display: flex;
+            width: 150vh;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .mainCodeCard{ 
+            display: inline-block;
+            position: relative;
+            z-index: 3;
+            width: 151px;
+            height: 110px;
+            cursor:pointer;
+        }
+        .codeCard{
+            text-align: center;
+            display: inline-block;
+            width: 150px;
+            height: 110px;
+            position: absolute;
+            box-shadow: 5px 0px 18px -5px;
+            background-color:#252838;
+            z-index: 2;
+            padding:25px;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        .mainCodeCard:hover .codeCard{
+            background-color:#e31b72;
+            transform: translate(0px,-55px);
+            
+        }
+        .mainCodeCard:hover .codeDetail{
+            transform: translate(0px,55px);
+        }
+        .codeCard .text{
+            position: absolute;
+            top:75%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            color: #747ead;
+            transition: 1s;
+        }
+        .mainCodeCard:hover .codeCard .text{
+            color:white;
+        }
+        .mainCodeCard:hover .codeCard .fa-solid{
+            color:white;
+        }
+        .codeDetail{
+            padding:15px;
+            box-sizing: border-box;
+            display: inline-block;
+            position: absolute;
+            width: 150px;
+            height: 110px;
+            z-index: 1;
+            background-color: white;
+            box-shadow: 5px 9px 18px 1px black;
+            transition: 1s;
+            font-size:13px;
+        }
+        .fa-solid{
+            font-size:30px;
+            color: #747ead;
+            transition: 1s;
+        }
+        button{
+            position: absolute;
+            top:79px;
+            left:53px;
+            border:1px solid #c9c9c9;
+            box-shadow: 1px 1px 0px 1px #8c8c8c;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainCodeCard">
+            <div class="codeCard"><i class="fa-solid fa-pencil"></i><div class="text">Design</div> </div>
+            <div class="codeDetail">Lorem ipsum dolor sit amet, consectetur adipiscing elit...<button>Read More</button></div>
+                 </div>
+
+        <div class="mainCodeCard">
+   <div class="codeCard"><i class="fa-solid fa-code"></i><div class="text">Code</div> </div>
+   <div class="codeDetail">Lorem ipsum dolor sit amet, consectetur adipiscing elit...<button>Read More</button></div>
+        </div>
+
+        <div class="mainCodeCard">
+            <div class="codeCard"><i class="fa-solid fa-rocket"></i><div class="text">Launch</div> </div>
+            <div class="codeDetail">Lorem ipsum dolor sit amet, consectetur adipiscing elit...<button>Read More</button></div>
+                 </div>
+   
+    </div>
+</body>
+</html>
